@@ -1140,13 +1140,13 @@ class MeshDataTransfer (object):
         self.hit_faces.shape = (v_count, 3, 3)
 
         # get the ids of the hit vertices
-        self.related_ids = np.zeros(v_count * 3, dtype=np.int)
+        self.related_ids = np.zeros(v_count * 3, dtype=np.int_) # fix for blender 41
         self.related_ids.shape = (v_count, 3)
 
         self.source.transfer_bmesh.faces.ensure_lookup_table()
 
         # np bool array with hit verts
-        self.missed_projections = np.ones(v_count * 3, dtype=np.bool)
+        self.missed_projections = np.ones(v_count * 3, dtype=np.bool_) # fix for blender 41
         self.missed_projections.shape = (v_count, 3)
         v_normal = Vector((0.0,0.0, 1.0))
         for v in self.target.transfer_bmesh.verts:
