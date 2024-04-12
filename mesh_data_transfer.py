@@ -1117,7 +1117,7 @@ class MeshDataTransfer (object):
 
     @staticmethod
     def transform_vertices_array(array, mat):
-        verts_co_4d = np.ones(shape=(array.shape[0] , 4) , dtype=np.float)
+        verts_co_4d = np.ones(shape=(array.shape[0] , 4) , dtype=np.float_)#numpy fix for blender 4.1 using the world object space
         verts_co_4d[: , :-1] = array  # cos v (x,y,z,1) - point,   v(x,y,z,0)- vector
         local_transferred_position = np.einsum ('ij,aj->ai' , mat , verts_co_4d)
         return local_transferred_position[:, :3]
