@@ -1,21 +1,16 @@
-# mesh-data-transfer
-Please download & review the original add-on, by Maurizio Memoli, for free on Gumroad: https://mmemoli.gumroad.com/l/tOKEh.  
-Rehost of MeshDataTransfer Blender addon under the GPL Blender license, [see](https://www.blender.org/about/license/).  
+Please download & review the original add-on, by Maurizio Memoli, for free on Gumroad: https://mmemoli.gumroad.com/l/tOKEh
 
-[![youtube](https://img.youtube.com/vi/CvMeK_IIw-Y/0.jpg)](https://www.youtube.com/watch?v=CvMeK_IIw-Y)  
-_Click the image to see the add-on in action_
+Fork of MeshDataTransfer Blender addon under the GPL Blender license, [see](https://www.blender.org/about/license/).
 
-## version
-2.0.5, minor numpy type issue fix for blender 4.1
+_This fork adds multilingual UI support._
 
+## Version
+2.1.0 — Translation Fork by FemKiwii
 
+## About
+This add-on transfers mesh data from a target to a specified source based on different sample spaces. It works like Maya's Mesh Transfer Attributes. The add-on lives in the Property panel under Mesh Data.
 
-## about
-This add on is to transfer mesh data from a target to a specified source based on different sample spaces.  
-It works like the Maya mesh transfer attributes.  
-The add on lives in the Property panel under the mesh Data.  
-
-The Sample spaces are 
+The sample spaces are:
 - World
 - Local
 - Active UV
@@ -26,4 +21,28 @@ The mesh data includes:
 - UV
 - Vertex Groups
 - Shape Keys
+- Shape Key Drivers (between armatures)
 
+## What's new in this fork
+- Fixed a circular import bug that prevented the addon from loading in Blender 4.2+
+- Multilingual UI — all labels, buttons, and tooltips now display in your chosen language
+
+## Supported languages
+English, Japanese (日本語), Korean (한국어), Chinese Simplified (中文), Chinese Traditional (繁體中文), Spanish (Español), Polish (Polski), Russian (Русский), Swedish (Svenska), Norwegian (Norsk), Danish (Dansk), German (Deutsch), French (Français), Italian (Italiano), Portuguese EU (Português), Portuguese Brazil (Português BR), Thai (ภาษาไทย), Indonesian (Indonesia), Dutch (Nederlands), Turkish (Türkçe), Vietnamese (Tiếng Việt)
+
+## Requirements
+- Blender 4.2 or later
+
+## Installation
+1. Download the `.zip` file
+2. In Blender, go to **Edit > Preferences > Get Extensions**
+3. Click the dropdown arrow (top right) and choose **Install from Disk**
+4. Select the downloaded `.zip`
+
+## Credits
+- **Original addon:** Maurizio Memoli
+- **Fork maintainer:** FemKiwii
+- **Translations:** FemKiwii, assisted by Claude AI (by Anthropic)
+
+## License
+GNU General Public License v2+
